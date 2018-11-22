@@ -1,5 +1,7 @@
 {
   "name": "enquiry",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

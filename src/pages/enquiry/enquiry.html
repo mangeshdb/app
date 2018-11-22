@@ -1,0 +1,69 @@
+<!--
+  Generated template for the EnquiryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Enquiry</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-list>
+
+		  <ion-item>
+		    <ion-label floating>Name</ion-label>
+		    <ion-input type="text"   [(ngModel)]="fullname"></ion-input>
+		  </ion-item>
+
+		  <ion-item>
+		    <ion-label floating>Mob. Number</ion-label>
+		    <ion-input type="tel" [(ngModel)]="mobile"></ion-input>
+		  </ion-item>
+
+		  <ion-item>
+			  <ion-label floating>Date of travel</ion-label>
+			  <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="travel_date"></ion-datetime>
+			</ion-item>
+
+			<ion-item>
+			  <ion-label  floating>Select cabin</ion-label>
+			  <ion-select [(ngModel)]="cabin">
+			    <ion-option value="Business">Business</ion-option>
+			    <ion-option value="First Class">First class</ion-option>
+			  </ion-select>
+			</ion-item>
+
+			<ion-item>
+			  <ion-label floating>Return date</ion-label>
+			  <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="return_date"></ion-datetime>
+			</ion-item>
+
+			<ion-item>
+			    <ion-label floating>Any preferred airline</ion-label>
+			    <ion-input type="text"  [(ngModel)]="preferred_airline"></ion-input>
+		 	</ion-item>
+
+		   <ion-item>
+	        <ion-label floating>Comments</ion-label>
+	        <ion-textarea [(ngModel)]="comment"></ion-textarea>
+	      </ion-item>
+
+	       <ion-item>
+		    <ion-label>Dates are flexible?</ion-label>
+		    <ion-checkbox [(ngModel)]="flexible" checked="false" ></ion-checkbox>
+		  </ion-item>
+
+	      <button ion-button  block (click)="send()">Submit</button>
+
+	</ion-list>
+
+
+
+</ion-content>
